@@ -1,7 +1,6 @@
 # WMLETRAS - Jogo de Palavras Cruzadas
 
 **Autor:** Washington Matheus Almeida Xavier  
-**Matrícula:** 252024622  
 **Disciplina:** Algoritmos e Programação de Computadores (APC)
 
 ## 🎮 Sobre o Projeto
