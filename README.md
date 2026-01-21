@@ -55,7 +55,7 @@ O projeto foi desenvolvido com foco na manipulação de arquivos (leitura de fas
 
 ## 📂 Estrutura dos Arquivos
 
-* `252024622.c.c`: Código fonte principal do jogo.
+* `codigo.c`: Código fonte principal do jogo.
 * `entrada.txt`: Arquivo de texto contendo as fases (Letras embaralhadas e respostas).
 * `ranking.bin`: Arquivo binário gerado automaticamente para salvar os recordes.
 
