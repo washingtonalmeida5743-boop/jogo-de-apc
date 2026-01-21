@@ -7,7 +7,7 @@
 #else
 #define CLEAR "clear"
 #endif
-int pontos = 0;
+
 //washington matheus almeida xavier 
 
 //>>ATENCAO<<
@@ -19,6 +19,11 @@ int pontos = 0;
 //pesquisei como abria arquivo porque tava dando erro https://youtu.be/MtYuhRtQPHU?si=JRl_IjuhQ8Fgwdpn
 //pesquisei como limpar a tela. https://stackoverflow.com/questions/55672661/what-does-printf-033h-033j-do-in-c
 //pesquisei como mudava a cor do terminal para parecer hack https://youtu.be/Hl-7xMl7bn0?si=vyftMrx6yjXdfLHp
+
+// Declarações de funções (protótipos)
+
+int pontos = 0;
+int qtd_fases_carregadas = 0;
 
 typedef struct {
     char nome[100];
@@ -33,7 +38,27 @@ typedef struct {
 } Fase;
 Fase lista_fases[50]; 
 
-int qtd_fases_carregadas = 0;
+int contartama(char *texto);
+void centralizado(char *texto);
+void pausar();
+void limparTela();
+void imprimiresp(int qtd);
+void salvar_progresso(char* nome);
+void terminarjogo();
+int sairdojogo();
+void ordenar_ranking(SaveGame *vetor, int qtd);
+void rankind();
+void instrucoes();
+int carregar_fases();
+int jogar(char nomes[]);
+int jogo();
+void apagarranking();
+int menu();
+int configuracao();
+void chamafuncoesprincipais(char nomes[]);
+void erro_palavra();
+void tamanhodapalavra(int* y, char nomes[], int* nome_valido);
+void menu1(char* nomes);
 
 void centralizado(char *texto) {
     int tam_texto = contartama(texto);
@@ -194,7 +219,6 @@ void rankind() {
         printf("\n");
 
         for (int i = 0; i < qtd; i++) {
-            char texto[100];
             printf("%*s%dº - %s .......... %d pts\n", 
                    (LARGURA_TELA - 40)/2, "",
                    i + 1, 
